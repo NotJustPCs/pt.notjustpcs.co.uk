@@ -7,7 +7,7 @@ function pullQueryString() {
 }
 
 function WriteOneLink(URLprefix,URLsuffix,TelNo,FAicon,LinkDesc) {
-	return "<a class='list-group-item' target='_blank' href='" + URLprefix + TelNo + URLsuffix + "><i class='fa fa-" + FAicon + " fa-fw' aria-hidden='true'></i>&nbsp; " + LinkDesc + "</a>";
+	return "<a class='list-group-item' target='_blank' href='" + URLprefix + TelNo + URLsuffix + "'><i class='fa fa-" + FAicon + " fa-fw' aria-hidden='true'></i>&nbsp; " + LinkDesc + "</a>";
 }
 
 function WriteLinks(IDtoWrite) {
