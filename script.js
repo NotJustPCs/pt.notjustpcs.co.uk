@@ -15,5 +15,6 @@ function WriteLinks(IDtoWrite) {
 	WLlinks = WLlinks + "</br>" + WriteOneLink("https://www.google.co.uk/#q=","",document.getElementById('TelNo').value,"google","Google")
 	WLlinks = WLlinks + "</br>" + WriteOneLink("https://contacts.google.com/u/0/preview/search/","",document.getElementById('TelNo').value,"address-book-o","Google Contacts")
 	WLlinks = WLlinks + "</br>" + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('TelNo').value,"sitemap","Current supplier")
+	WLlinks = WLlinks + "</br>" + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",document.getElementById('TelNo').value.substring(0, 5),"sitemap","Area code lookup")
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
 }
