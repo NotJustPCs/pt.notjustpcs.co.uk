@@ -12,8 +12,8 @@ function WriteOneLink(URLprefix,URLsuffix,TelNo,FAicon,LinkDesc) {
 
 function WriteLinks(IDtoWrite) {
 	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",document.getElementById('TelNo').value,"facebook","Facebook")
-	WLlinks + WLlinks = WriteOneLink("https://www.google.co.uk/#q=","",document.getElementById('TelNo').value,"google","Google")
-	WLlinks + WLlinks = WriteOneLink("https://contacts.google.com/u/0/preview/search/","",document.getElementById('TelNo').value,"address-book-o","Google Contacts")
-	WLlinks + WLlinks = WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('TelNo').value,"sitemap","Current supplier")
+	WLlinks = WLlinks + "</br>" + WriteOneLink("https://www.google.co.uk/#q=","",document.getElementById('TelNo').value,"google","Google")
+	WLlinks = WLlinks + "</br>" + WriteOneLink("https://contacts.google.com/u/0/preview/search/","",document.getElementById('TelNo').value,"address-book-o","Google Contacts")
+	WLlinks = WLlinks + "</br>" + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('TelNo').value,"sitemap","Current supplier")
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
 }
