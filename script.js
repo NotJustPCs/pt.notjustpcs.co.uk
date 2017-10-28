@@ -12,9 +12,11 @@ function WriteOneLink(URLprefix,URLsuffix,TelNo,FAicon,LinkDesc) {
 
 function WriteLinks(IDtoWrite) {
 	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",document.getElementById('PhoneNum').value,"facebook","Facebook");
-	WLlinks = WLlinks + "</br>" + WriteOneLink("https://www.google.co.uk/#q=","",document.getElementById('PhoneNum').value,"google","Google")
-	WLlinks = WLlinks + "</br>" + WriteOneLink("https://contacts.google.com/u/0/preview/search/","",document.getElementById('PhoneNum').value,"address-book-o","Google Contacts")
-	WLlinks = WLlinks + "</br>" + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('PhoneNum').value,"sitemap","Current supplier")
-	WLlinks = WLlinks + "</br>" + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",document.getElementById('PhoneNum').value.substring(0, 5),"sitemap","Area code lookup")
+	WLlinks = WLlinks + WriteOneLink("https://www.google.co.uk/#q=","",document.getElementById('PhoneNum').value,"google","Google")
+	WLlinks = WLlinks + WriteOneLink("https://contacts.google.com/u/0/preview/search/","",document.getElementById('PhoneNum').value,"address-book-o","Google Contacts")
+	WLlinks = WLlinks + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('PhoneNum').value,"sitemap","Current supplier")
+	WLlinks = WLlinks + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",document.getElementById('PhoneNum').value.substring(0, 5),"sitemap","Area code lookup")
+	WLlinks = WLlinks + WriteOneLink("tel:","",document.getElementById('PhoneNum').value,"sitemap","Call number")
+	WLlinks = WLlinks + WriteOneLink("https://pt.notjustpcs.co.uk/?","",document.getElementById('PhoneNum').value,"sitemap","Shortcut this page")
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
 }
