@@ -17,6 +17,6 @@ function WriteLinks(IDtoWrite) {
 	WLlinks = WLlinks + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('PhoneNum').value,"sitemap","Current supplier")
 	WLlinks = WLlinks + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",document.getElementById('PhoneNum').value.substring(0, 5),"map-pin","Area code lookup")
 	WLlinks = WLlinks + WriteOneLink("tel:","",document.getElementById('PhoneNum').value,"phone","Call number")
-	WLlinks = WLlinks + WriteOneLink("https://pt.notjustpcs.co.uk/?","",document.getElementById('PhoneNum').value,"link","Shortcut this page")
+	WLlinks = WLlinks + WriteOneLink("http://pt.notjustpcs.co.uk/?","",document.getElementById('PhoneNum').value,"link","Shortcut this page")
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
 }
