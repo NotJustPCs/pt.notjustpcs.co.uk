@@ -47,6 +47,13 @@
 		
 		  var cpybtnobj = document.getElementById('cpybtn');
   		  var clipboard = new Clipboard(cpybtnobj);
+		
+		  clipboard.on('success', function(e) {
+		  	console.log(e);
+		  });
+		  clipboard.on('error', function(e) {
+			console.log(e);
+		  });
 	</script>
 </head>
 <body>
