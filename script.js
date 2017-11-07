@@ -1,11 +1,3 @@
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
-
 function pullQueryString() {
 	var error = window.location.search;
 	if (error.substring(0, 1) == "?") {
