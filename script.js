@@ -11,7 +11,8 @@ function WriteOneLink(URLprefix,URLsuffix,TelNo,FAicon,LinkDesc) {
 }
 
 function WriteLinks(IDtoWrite) {
-	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",document.getElementById('PhoneNum').value,"facebook","Facebook");
+	var PhoneNum = document.getElementById('PhoneNum').value;
+	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",PhoneNum,"facebook","Facebook");
 	WLlinks = WLlinks + WriteOneLink("https://www.google.co.uk/#q=","",document.getElementById('PhoneNum').value,"google","Google")
 	WLlinks = WLlinks + WriteOneLink("https://contacts.google.com/search/","",document.getElementById('PhoneNum').value,"address-book-o","Google Contacts")
 	WLlinks = WLlinks + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",document.getElementById('PhoneNum').value,"sitemap","Current supplier")
