@@ -10,7 +10,7 @@ function WriteOneLink(URLprefix,URLsuffix,TelNo,FAicon,LinkDesc) {
 	return "<a class='list-group-item' target='_blank' href='" + URLprefix + TelNo + URLsuffix + "'><i class='fa fa-" + FAicon + " fa-fw' aria-hidden='true'></i>&nbsp; " + LinkDesc + "</a>";
 }
 
-function WriteLinks(IDtoWrite) {
+function WriteLinks(IDtoWrite,LocalLinks) {
 	var PhoneNum = document.getElementById('PhoneNum').value;
 	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",PhoneNum,"facebook","Facebook");
 	WLlinks = WLlinks + WriteOneLink("https://www.google.co.uk/#q=","",PhoneNum,"google","Google")
@@ -20,4 +20,12 @@ function WriteLinks(IDtoWrite) {
 	WLlinks = WLlinks + WriteOneLink("tel:","",PhoneNum,"phone","Call number")
 	WLlinks = WLlinks + WriteOneLink("http://pt.notjustpcs.co.uk/?","",PhoneNum,"link","Link to this page")
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
+}
+
+function local_load(){
+	WriteLinks('actions', 1);
+}
+
+function local_err(){
+	WriteLinks('actions', 0);
 }
