@@ -19,7 +19,7 @@ function WriteLinks(IDtoWrite,LocalLinks) {
 	WLlinks = WLlinks + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",PhoneNum.substring(0, 5),"map-pin","Area code lookup")
 	WLlinks = WLlinks + WriteOneLink("tel:","",PhoneNum,"phone","Call number")
 	WLlinks = WLlinks + WriteOneLink("http://pt.notjustpcs.co.uk/?","",PhoneNum,"link","Link to this page")
-	if (LocalLinks = 1) {
+	if (LocalLinks = 0) {
 		WLlinks = WLlinks + WriteOneLink("http://njn/njpctools/","",PhoneNum,"archive","Internal NJPC Tools")		
 	}
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
