@@ -25,10 +25,11 @@ function WriteLinks(IDtoWrite,LocalLinks) {
 	WLlinks = WLlinks + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",PhoneNum,"sitemap","Current supplier");
 	WLlinks = WLlinks + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",PhoneNum.substring(0, 5),"map-pin","Area code lookup");
 	WLlinks = WLlinks + WriteOneLink("tel:","",PhoneNum,"phone","Call number");
-	WLlinks = WLlinks + WriteOneLink("https://api.whatsapp.com/send?phone=44","",PhoneNum.substring(PhoneNum.length - 10),"whatsapp","Send WhatsApp message (UK numbers only)");
+	WLlinks = WLlinks + WriteOneLink("https://web.whatsapp.com/send?phone=44","",PhoneNum.substring(PhoneNum.length - 10),"whatsapp","Send WhatsApp message (UK numbers only)");
+//	WLlinks = WLlinks + WriteOneLink("https://api.whatsapp.com/send?phone=44","",PhoneNum.substring(PhoneNum.length - 10),"whatsapp","Send WhatsApp message (UK numbers only)");
 	WLlinks = WLlinks + WriteOneLink("http://pt.notjustpcs.co.uk/?","",PhoneNum,"link","Link to this page");
 //	if (LocalLinks = 1) {
-//		WLlinks = WLlinks + WriteOneLink("http://njn/njpctools/","",PhoneNum,"archive","Internal NJPC Tools")		
+//		WLlinks = WLlinks + WriteOneLink("http://njn/njpctools/","",PhoneNum,"archive","Internal NJPC Tools")
 //	}
 	document.getElementById(IDtoWrite).innerHTML = WLlinks;
 }
