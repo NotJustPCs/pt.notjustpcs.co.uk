@@ -22,7 +22,7 @@ function WriteLinks(IDtoWrite,LocalLinks) {
 	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",PhoneNum,"facebook","Facebook");
 	WLlinks = WLlinks + WriteOneLink("https://www.google.co.uk/#q=","",PhoneNum + ' OR "' + PhoneNum.substring(0, 5) + " " + PhoneNum.substring(PhoneNum.length - 6) + '"',"google","Google");
 	WLlinks = WLlinks + WriteOneLink("https://contacts.google.com/search/","",PhoneNum.substring(PhoneNum.length - 10),"address-book-o","Google Contacts");
-	WLlinks = WLlinks + WriteOneLink("https://go.xero.com/Search/GlobalSearch/ViewAllResults?query=","&filter=all",PhoneNum.substring(PhoneNum.length - 6),"dot-circle-o","Xero");
+	WLlinks = WLlinks + WriteOneLink("https://go.xero.com/Search/GlobalSearch/ViewAllResults?query=","&filter=all",PhoneNum.substring(PhoneNum.length - 6),"dot-circle-o","Xero (just last 6 digits)");
 	WLlinks = WLlinks + WriteOneLink("https://portal.aql.com/telecoms/network_lookup.php?number=","&nlSubmit=submit",PhoneNum,"sitemap","Current supplier");
 	WLlinks = WLlinks + WriteOneLink("https://www.ukphoneinfo.com/area-code/","",PhoneNum.substring(0, 5),"map-pin","Area code lookup");
 	WLlinks = WLlinks + WriteOneLink("tel:","",PhoneNum,"phone","Call number");
