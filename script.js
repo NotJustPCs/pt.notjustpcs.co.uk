@@ -20,7 +20,7 @@ function WriteOneLink(URLprefix,URLsuffix,TelNo,FAicon,LinkDesc) {
 function WriteLinks(IDtoWrite,LocalLinks) {
 	var PhoneNum = document.getElementById('PhoneNum').value;
 	WLlinks = WriteOneLink("https://www.facebook.com/search/top/?q=","",PhoneNum,"facebook","Facebook");
-	WLlinks = WLlinks + WriteOneLink("https://www.google.co.uk/#q=","",PhoneNum + ' OR "' + PhoneNum.substring(0, 5) + " " + PhoneNum.substring(PhoneNum.length - 6) + '"',"google","Google");
+	WLlinks = WLlinks + WriteOneLink("https://www.google.co.uk/search?q=","",PhoneNum + ' OR "' + PhoneNum.substring(0, 5) + " " + PhoneNum.substring(PhoneNum.length - 6) + '"',"google","Google");
 	WLlinks = WLlinks + WriteOneLink("https://contacts.google.com/search/","",PhoneNum.substring(PhoneNum.length - 10),"address-book-o","Google Contacts");
 	WLlinks = WLlinks + WriteOneLink("https://go.xero.com/Search/GlobalSearch/ViewAllResults?query=","&filter=all",PhoneNum.substring(PhoneNum.length - 6),"dot-circle-o","Xero (just last 6 digits)");
 	WLlinks = WLlinks + WriteOneLink("https://notjustpcs.zendesk.com/agent/search/1?type=ticket&q=","",PhoneNum,"ticket","ZenDesk");
